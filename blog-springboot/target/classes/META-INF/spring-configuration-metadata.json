@@ -1,0 +1,209 @@
+{
+  "groups": [
+    {
+      "name": "oauth.gitee",
+      "type": "com.galaxy.config.properties.GiteeProperties",
+      "sourceType": "com.galaxy.config.properties.GiteeProperties"
+    },
+    {
+      "name": "oauth.github",
+      "type": "com.galaxy.config.properties.GithubProperties",
+      "sourceType": "com.galaxy.config.properties.GithubProperties"
+    },
+    {
+      "name": "oauth.qq",
+      "type": "com.galaxy.config.properties.QqProperties",
+      "sourceType": "com.galaxy.config.properties.QqProperties"
+    },
+    {
+      "name": "thread.pool",
+      "type": "com.galaxy.config.properties.ThreadPoolProperties",
+      "sourceType": "com.galaxy.config.properties.ThreadPoolProperties"
+    },
+    {
+      "name": "upload.cos",
+      "type": "com.galaxy.config.properties.CosProperties",
+      "sourceType": "com.galaxy.config.properties.CosProperties"
+    },
+    {
+      "name": "upload.oss",
+      "type": "com.galaxy.config.properties.OssProperties",
+      "sourceType": "com.galaxy.config.properties.OssProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "oauth.gitee.access-token-url",
+      "type": "java.lang.String",
+      "description": "Gitee访问令牌地址",
+      "sourceType": "com.galaxy.config.properties.GiteeProperties"
+    },
+    {
+      "name": "oauth.gitee.client-id",
+      "type": "java.lang.String",
+      "description": "clientId",
+      "sourceType": "com.galaxy.config.properties.GiteeProperties"
+    },
+    {
+      "name": "oauth.gitee.client-secret",
+      "type": "java.lang.String",
+      "description": "clientSecret",
+      "sourceType": "com.galaxy.config.properties.GiteeProperties"
+    },
+    {
+      "name": "oauth.gitee.grant-type",
+      "type": "java.lang.String",
+      "description": "Gitee登录类型",
+      "sourceType": "com.galaxy.config.properties.GiteeProperties"
+    },
+    {
+      "name": "oauth.gitee.redirect-url",
+      "type": "java.lang.String",
+      "description": "Gitee回调域名",
+      "sourceType": "com.galaxy.config.properties.GiteeProperties"
+    },
+    {
+      "name": "oauth.gitee.user-info-url",
+      "type": "java.lang.String",
+      "description": "Gitee用户信息地址",
+      "sourceType": "com.galaxy.config.properties.GiteeProperties"
+    },
+    {
+      "name": "oauth.github.access-token-url",
+      "type": "java.lang.String",
+      "description": "Github访问令牌地址",
+      "sourceType": "com.galaxy.config.properties.GithubProperties"
+    },
+    {
+      "name": "oauth.github.client-id",
+      "type": "java.lang.String",
+      "description": "clientId",
+      "sourceType": "com.galaxy.config.properties.GithubProperties"
+    },
+    {
+      "name": "oauth.github.client-secret",
+      "type": "java.lang.String",
+      "description": "clientSecret",
+      "sourceType": "com.galaxy.config.properties.GithubProperties"
+    },
+    {
+      "name": "oauth.github.redirect-url",
+      "type": "java.lang.String",
+      "description": "Github回调域名",
+      "sourceType": "com.galaxy.config.properties.GithubProperties"
+    },
+    {
+      "name": "oauth.github.user-info-url",
+      "type": "java.lang.String",
+      "description": "Github用户信息地址",
+      "sourceType": "com.galaxy.config.properties.GithubProperties"
+    },
+    {
+      "name": "oauth.qq.app-id",
+      "type": "java.lang.String",
+      "description": "QQ appId",
+      "sourceType": "com.galaxy.config.properties.QqProperties"
+    },
+    {
+      "name": "oauth.qq.check-token-url",
+      "type": "java.lang.String",
+      "description": "校验token地址",
+      "sourceType": "com.galaxy.config.properties.QqProperties"
+    },
+    {
+      "name": "oauth.qq.user-info-url",
+      "type": "java.lang.String",
+      "description": "QQ用户信息地址",
+      "sourceType": "com.galaxy.config.properties.QqProperties"
+    },
+    {
+      "name": "thread.pool.core-pool-size",
+      "type": "java.lang.Integer",
+      "description": "核心线程池大小",
+      "sourceType": "com.galaxy.config.properties.ThreadPoolProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "thread.pool.keep-alive-seconds",
+      "type": "java.lang.Integer",
+      "description": "线程池维护线程所允许的空闲时间",
+      "sourceType": "com.galaxy.config.properties.ThreadPoolProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "thread.pool.max-pool-size",
+      "type": "java.lang.Integer",
+      "description": "最大可创建的线程数",
+      "sourceType": "com.galaxy.config.properties.ThreadPoolProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "thread.pool.queue-capacity",
+      "type": "java.lang.Integer",
+      "description": "队列最大长度",
+      "sourceType": "com.galaxy.config.properties.ThreadPoolProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "upload.cos.bucket-name",
+      "type": "java.lang.String",
+      "description": "存储桶名称",
+      "sourceType": "com.galaxy.config.properties.CosProperties"
+    },
+    {
+      "name": "upload.cos.region",
+      "type": "java.lang.String",
+      "description": "所属区域",
+      "sourceType": "com.galaxy.config.properties.CosProperties"
+    },
+    {
+      "name": "upload.cos.secret-id",
+      "type": "java.lang.String",
+      "description": "访问密钥id",
+      "sourceType": "com.galaxy.config.properties.CosProperties"
+    },
+    {
+      "name": "upload.cos.secret-key",
+      "type": "java.lang.String",
+      "description": "访问密钥密码",
+      "sourceType": "com.galaxy.config.properties.CosProperties"
+    },
+    {
+      "name": "upload.cos.url",
+      "type": "java.lang.String",
+      "description": "cos域名",
+      "sourceType": "com.galaxy.config.properties.CosProperties"
+    },
+    {
+      "name": "upload.oss.access-key-id",
+      "type": "java.lang.String",
+      "description": "访问密钥id",
+      "sourceType": "com.galaxy.config.properties.OssProperties"
+    },
+    {
+      "name": "upload.oss.access-key-secret",
+      "type": "java.lang.String",
+      "description": "访问密钥密码",
+      "sourceType": "com.galaxy.config.properties.OssProperties"
+    },
+    {
+      "name": "upload.oss.bucket-name",
+      "type": "java.lang.String",
+      "description": "bucket名称",
+      "sourceType": "com.galaxy.config.properties.OssProperties"
+    },
+    {
+      "name": "upload.oss.endpoint",
+      "type": "java.lang.String",
+      "description": "终点",
+      "sourceType": "com.galaxy.config.properties.OssProperties"
+    },
+    {
+      "name": "upload.oss.url",
+      "type": "java.lang.String",
+      "description": "oss域名",
+      "sourceType": "com.galaxy.config.properties.OssProperties"
+    }
+  ],
+  "hints": []
+}
