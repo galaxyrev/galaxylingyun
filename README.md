@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://www.galaxylingyun.top">
-    <img src="https://static.galaxylingyun.top/config/2c62bd7c76d8c64e1c47d31419abf32e.jpg" alt="灵韵博客" style="border-radius: 50%; height: 260px">
+    <img src="https://avatars.githubusercontent.com/u/96897772?v=4" alt="灵韵博客" style="border-radius: 50%; height: 260px">
   </a>
 </p>
 
@@ -101,10 +101,10 @@
 
 ## 项目截图
 
-![](https://static.galaxylingyun.top/resource/jieping1.jpg)
-![](https://static.galaxylingyun.top/resource/jieping2.jpg)
-![](https://static.galaxylingyun.top/resource/jieping3.jpg)
-![](https://static.galaxylingyun.top/resource/jieping4.jpg)
+![](https://static.galaxylingyun.top/resource/jieping1.png)
+![](https://static.galaxylingyun.top/resource/jieping2.png)
+![](https://static.galaxylingyun.top/resource/jieping3.png)
+![](https://static.galaxylingyun.top/resource/jieping4.png)
 
 
 鸣谢项目：
