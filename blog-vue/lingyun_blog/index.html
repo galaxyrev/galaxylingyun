@@ -6,8 +6,8 @@
   <link rel="icon" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>灵韵 BLOG</title>
-  <meta name="Keywords" content="灵韵博客 - blog,灵韵Blog,博客,个人博客,古风,诗词,文学,编程,技术,日常记录;"/>
-  <meta name="Description" content="灵韵博客 - 集诗词文学,编程技术,Vue3与TypeScript个人博客;"/>
+  <meta name="Keywords" content="灵韵博客 - blog,灵韵Blog,博客,个人博客,古风,诗词,文学,编程,技术,日常记录;" />
+  <meta name="Description" content="灵韵博客 - 集诗词文学,编程技术,Vue3与TypeScript个人博客;" />
   <!-- 编辑器editor所需 -->
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script> -->
@@ -211,27 +211,28 @@
       color: #FFF;
       opacity: 0.5;
     }
+
     /* 看板娘样式 */
     /* <!--看板娘 -自定义大小，隐藏对话框和对话框高度--> */
     #waifu {
-      left: 59vw!important;
+      right: 69px!important;
+      bottom: 11px!important;
     }
     #waifu #live2d {
       height: 285px!important;
       width: 265px!important;
-      left: 20vw!important;
+      right: 20px!important;
     }
     #waifu-tips {
       width: 280px!important;
-      left: 18vw!important;
+      right: -9px!important;
       top: -20px!important;
       background: rgba(12, 170, 243, 0.4)!important;
-      color: #fafcfd;
+      color: #fafcfd!important;
       border: #FFF!important;
-      /* background-color: #9ae1f7!important;
-      opacity: 0.6!important; */
       /*display:none !important;隐藏对话框*/
     }
+    /* 隐藏live2d后的标签样式 */
     #waifu-toggle {
       background-color: #039dcc!important;
       left: 10px!important;
@@ -241,15 +242,17 @@
   </style>
   <!--看板娘加载指定模型-->
   <script>
-    localStorage.setItem('modelId', '6');
-    localStorage.setItem('modelTexturesId', '15');
+    localStorage.setItem('modelId', '11');
+    localStorage.setItem('modelTexturesId', '14');
   </script>
-  <script src="https://static.galaxylingyun.top/resource/autoload.js"></script>
+  <!-- <script src="https://static.galaxylingyun.top/resource/autoload.js"></script> -->
+  <script src="https://fastly.jsdelivr.net/gh/galaxyrev/bkyl2d@main/loads.js"></script>
   <!-- 樱花 -->
   <script src="https://static.galaxylingyun.top/resource/sakura.js"></script>
   <!-- 雪花 -->
   <!-- <script src="https://static.galaxylingyun.top/resource/snow.min.js"></script> -->
 </head>
+
 <body>
   <div id="app">
     <div id="loader-wrapper">
@@ -260,135 +263,135 @@
     </div>
   </div>
   <script type="module" src="/src/main.ts"></script>
-  <canvas id="canvas_sakura"
-          style="position: fixed; top: 0px; left: 0px; pointer-events: none; "></canvas>
+  <canvas id="canvas_sakura" style="position: fixed; top: 0px; left: 0px; pointer-events: none; "></canvas>
   <canvas class="fireworks"
-          style="position: fixed; top: 0px; left: 0px; pointer-events: none; z-index: 9999999;"></canvas>
+    style="position: fixed; top: 0px; left: 0px; pointer-events: none; z-index: 9999999;"></canvas>
   <script src="https://static.galaxylingyun.top/resource/fireworks.min.js"></script>
 </body>
 <!-- 拖尾特效 -->
 <span class="js-cursor-container"></span>
 <script>(function fairyDustCursor() {
-  var possibleColors = ["#f64954", "#f1cd54", "#38b8e0", "#64d383", "#9561f5"]
-  var width = window.innerWidth;
-  var height = window.innerHeight;
-  var cursor = { x: width / 2, y: width / 2 };
-  var particles = [];
+    var possibleColors = ["#f64954", "#f1cd54", "#38b8e0", "#64d383", "#9561f5"]
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    var cursor = { x: width / 2, y: width / 2 };
+    var particles = [];
 
-  function init() {
-    bindEvents();
-    loop();
-  }
-
-  // Bind events that are needed
-  function bindEvents() {
-    document.addEventListener('mousemove', onMouseMove);
-    window.addEventListener('resize', onWindowResize);
-  }
-
-  function onWindowResize(e) {
-    width = window.innerWidth;
-    height = window.innerHeight;
-  }
-
-  function onMouseMove(e) {
-    cursor.x = e.clientX;
-    cursor.y = e.clientY;
-
-    addParticle(cursor.x, cursor.y, possibleColors[Math.floor(Math.random() * possibleColors.length)]);
-  }
-
-  function addParticle(x, y, color) {
-    var particle = new Particle();
-    particle.init(x, y, color);
-    particles.push(particle);
-  }
-
-  function updateParticles() {
-
-    // Updated
-    for (var i = 0; i < particles.length; i++) {
-      particles[i].update();
+    function init() {
+      bindEvents();
+      loop();
     }
 
-    // Remove dead particles
-    for (var i = particles.length - 1; i >= 0; i--) {
-      if (particles[i].lifeSpan < 0) {
-        particles[i].die();
-        particles.splice(i, 1);
+    // Bind events that are needed
+    function bindEvents() {
+      document.addEventListener('mousemove', onMouseMove);
+      window.addEventListener('resize', onWindowResize);
+    }
+
+    function onWindowResize(e) {
+      width = window.innerWidth;
+      height = window.innerHeight;
+    }
+
+    function onMouseMove(e) {
+      cursor.x = e.clientX;
+      cursor.y = e.clientY;
+
+      addParticle(cursor.x, cursor.y, possibleColors[Math.floor(Math.random() * possibleColors.length)]);
+    }
+
+    function addParticle(x, y, color) {
+      var particle = new Particle();
+      particle.init(x, y, color);
+      particles.push(particle);
+    }
+
+    function updateParticles() {
+
+      // Updated
+      for (var i = 0; i < particles.length; i++) {
+        particles[i].update();
+      }
+
+      // Remove dead particles
+      for (var i = particles.length - 1; i >= 0; i--) {
+        if (particles[i].lifeSpan < 0) {
+          particles[i].die();
+          particles.splice(i, 1);
+        }
+      }
+
+    }
+
+    function loop() {
+      requestAnimationFrame(loop);
+      updateParticles();
+    }
+
+    /**
+     * Particles
+     */
+    function Particle() {
+
+      this.character = "*";
+      this.lifeSpan = 120; //ms
+      this.initialStyles = {
+        "position": "fixed",
+        "display": "inline-block",
+        "top": "0px",
+        "left": "0px",
+        "pointerEvents": "none",
+        "touch-action": "none",
+        "z-index": "10000000",
+        "fontSize": "25px",
+        "will-change": "transform"
+      };
+
+      // Init, and set properties
+      this.init = function (x, y, color) {
+
+        this.velocity = {
+          x: (Math.random() < 0.5 ? -1 : 1) * (Math.random() / 2),
+          y: 1
+        };
+
+        this.position = { x: x + 10, y: y + 10 };
+        this.initialStyles.color = color;
+
+        this.element = document.createElement('span');
+        this.element.innerHTML = this.character;
+        applyProperties(this.element, this.initialStyles);
+        this.update();
+
+        document.querySelector('.js-cursor-container').appendChild(this.element);
+      };
+
+      this.update = function () {
+        this.position.x += this.velocity.x;
+        this.position.y += this.velocity.y;
+        this.lifeSpan--;
+
+        this.element.style.transform = "translate3d(" + this.position.x + "px," + this.position.y + "px, 0) scale(" + (this.lifeSpan / 120) + ")";
+      }
+
+      this.die = function () {
+        this.element.parentNode.removeChild(this.element);
+      }
+
+    }
+
+    /**
+     * Utils
+     */
+    // Applies css `properties` to an element.
+    function applyProperties(target, properties) {
+      for (var key in properties) {
+        target.style[key] = properties[key];
       }
     }
 
-  }
-
-  function loop() {
-    requestAnimationFrame(loop);
-    updateParticles();
-  }
-
-  /**
-   * Particles
-   */
-  function Particle() {
-
-    this.character = "*";
-    this.lifeSpan = 120; //ms
-    this.initialStyles = {
-      "position": "fixed",
-      "display": "inline-block",
-      "top": "0px",
-      "left": "0px",
-      "pointerEvents": "none",
-      "touch-action": "none",
-      "z-index": "10000000",
-      "fontSize": "25px",
-      "will-change": "transform"
-    };
-
-    // Init, and set properties
-    this.init = function (x, y, color) {
-
-      this.velocity = {
-        x: (Math.random() < 0.5 ? -1 : 1) * (Math.random() / 2),
-        y: 1
-      };
-
-      this.position = { x: x + 10, y: y + 10 };
-      this.initialStyles.color = color;
-
-      this.element = document.createElement('span');
-      this.element.innerHTML = this.character;
-      applyProperties(this.element, this.initialStyles);
-      this.update();
-
-      document.querySelector('.js-cursor-container').appendChild(this.element);
-    };
-
-    this.update = function () {
-      this.position.x += this.velocity.x;
-      this.position.y += this.velocity.y;
-      this.lifeSpan--;
-
-      this.element.style.transform = "translate3d(" + this.position.x + "px," + this.position.y + "px, 0) scale(" + (this.lifeSpan / 120) + ")";
-    }
-
-    this.die = function () {
-      this.element.parentNode.removeChild(this.element);
-    }
-
-  }
-
-  /**
-   * Utils
-   */
-  // Applies css `properties` to an element.
-  function applyProperties(target, properties) {
-    for (var key in properties) {
-      target.style[key] = properties[key];
-    }
-  }
-
-  if (!('ontouchstart' in window || navigator.msMaxTouchPoints)) init();
-})();
+    if (!('ontouchstart' in window || navigator.msMaxTouchPoints)) init();
+  })();
 </script>
+
 </html>
