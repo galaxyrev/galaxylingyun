@@ -103,7 +103,7 @@
 
 ![示例](https://static.galaxylingyun.top/resource/jieping1.png)
 ![示例](https://static.galaxylingyun.top/resource/jieping2.png)
-<img src="https://static.galaxylingyun.top/resource/jieping3.png">
+![示例](https://static.galaxylingyun.top/resource/jieping3.png)
 ![示例](https://static.galaxylingyun.top/resource/jieping4.png)
 
 
